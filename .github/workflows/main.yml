@@ -34,8 +34,8 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - run: |
-          az appservice plan create -g your_resource_group -n pywebplan
-          az webapp create -g your_resource_group -p pywebplan -n pyweb
+          az appservice plan create -g test_rg -n pywebplan
+          az webapp create -g test_rg -p pywebplan -n pyweb
 
       - name: Azure WebApp
         uses: Azure/webapps-deploy@v2
